@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Colors Table View Controller-->
         <scene sceneID="FWL-PE-YZo">
             <objects>
                 <tableViewController id="F5c-11-LkX" customClass="ColorsTableViewController" customModule="Colors_with_Navigation" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,6 +25,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="zE1-qT-wi0" kind="show" id="U6c-eE-8Pp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,32 +35,48 @@
                             <outlet property="delegate" destination="F5c-11-LkX" id="VLU-SY-3Nr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Flr-jO-gqP"/>
+                    <navigationItem key="navigationItem" id="Flr-jO-gqP"/>
                     <connections>
                         <outlet property="colorsTableView" destination="j9I-Nd-bDo" id="Xad-8C-oBt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTW-v7-THa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="590" y="-174"/>
+            <point key="canvasLocation" x="697" y="-174"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="qBe-QQ-8iK">
+        <!--Detail View Controller-->
+        <scene sceneID="1n1-eK-CGL">
             <objects>
-                <viewController id="ZhS-hP-YHh" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckb-6r-vYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="zE1-qT-wi0" customClass="DetailViewController" customModule="Colors_with_Navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="IGr-lP-geZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="mx9-UN-8BT"/>
+                        <viewControllerLayoutGuide type="top" id="i2a-LB-aCU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pu9-Ms-1L6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LiN-rG-8aR">
+                    <view key="view" contentMode="scaleToFill" id="t8m-0f-URD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYd-iU-Uku">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DYd-iU-Uku" firstAttribute="centerX" secondItem="t8m-0f-URD" secondAttribute="centerX" id="pVK-yX-bD0"/>
+                            <constraint firstItem="DYd-iU-Uku" firstAttribute="centerY" secondItem="t8m-0f-URD" secondAttribute="centerY" id="yGG-VO-Rsk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9wV-F0-K8p"/>
+                    <connections>
+                        <outlet property="colorLabel" destination="DYd-iU-Uku" id="cRB-0E-kcp"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ze-AP-wgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1454" y="-174"/>
+            <point key="canvasLocation" x="1582" y="-174"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bS7-vR-Xg6">

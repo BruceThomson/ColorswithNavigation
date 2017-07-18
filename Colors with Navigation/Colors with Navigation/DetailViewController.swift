@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var colorLabel: UILabel!
+   
     var color: String?
     override func viewDidLoad() {
         super.viewDidLoad()
