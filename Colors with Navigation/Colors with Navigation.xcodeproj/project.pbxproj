@@ -56,9 +56,9 @@
 		32E9E5AD1F1D8DA7006DB5B1 /* Colors with Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				32E9E5C61F1D9521006DB5B1 /* ColorsTableViewController.swift */,
 				32E9E5AE1F1D8DA7006DB5B1 /* AppDelegate.swift */,
 				32E9E5B21F1D8DA7006DB5B1 /* Main.storyboard */,
+				32E9E5C61F1D9521006DB5B1 /* ColorsTableViewController.swift */,
 				32E9E5C21F1D8EAD006DB5B1 /* DetailViewController.swift */,
 				32E9E5B51F1D8DA7006DB5B1 /* Assets.xcassets */,
 				32E9E5B71F1D8DA7006DB5B1 /* LaunchScreen.storyboard */,

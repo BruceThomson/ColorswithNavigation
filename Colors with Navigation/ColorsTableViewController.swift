@@ -13,9 +13,16 @@ class ColorsTableViewController: UITableViewController {
 
     var colors: [String] = ["red", "orange", "yellow", "green", "blue", "purple", "brown"]
     var orderUIColors: [UIColor] = [.red, .orange, .yellow, .green, .blue, .purple, .brown]
+    var color: String = ""
+    var UIColors: UIColor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        colorsTableView.delegate = self
+        colorsTableView.dataSource = self
+        
+        title = "Colors"
         
         // Do any additional setup after loading the view.
     }
@@ -55,6 +62,15 @@ class ColorsTableViewController: UITableViewController {
         if let row = tableView.indexPathForSelectedRow?.row {
             let color = colors[row]
             print("Selected cell \(color)")
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailViewController,
+            let row = colorsTableView.indexPathForSelectedRow?.row {
+            destination.color = colors[row]
+            destination.UIColor = orderUIColors[row]
         }
         
     }

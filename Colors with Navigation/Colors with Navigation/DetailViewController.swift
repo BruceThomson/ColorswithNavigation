@@ -11,10 +11,13 @@ import UIKit
 class DetailViewController: UIViewController {
     @IBOutlet weak var colorLabel: UILabel!
    
-    var color: String?
+    var color: String = ""
+    var UIColor: UIColor!
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = color
         colorLabel.text = color
+        self.view.backgroundColor = UIColor
         
         // Do any additional setup after loading the view.
     }
